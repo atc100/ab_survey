@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::post('alex', function () {
-    return view('welcome');
+Route::get('alex', function () {
+    return view('survey');
 });
 
