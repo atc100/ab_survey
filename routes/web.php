@@ -15,7 +15,21 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('alex', function () {
+Route::get('survey', function () {
     return view('survey');
 });
+
+
+// Route::post('alex', 'loginController@index');
+
+Route::post('alex', 'loginController@index');
+
+
+/*
+ Route::get('alex', function () {
+    return view('survey');
+});
+*/
+?>
+
 

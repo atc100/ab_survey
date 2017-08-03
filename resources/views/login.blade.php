@@ -5,7 +5,8 @@
 <title>Antibiotic Resistance Lab</title>
 </head>
 <body>
-<form action="alex">
+{!! Form::open(['url' => 'alex']) !!}
+<!-- <form action="alex" method="post"> -->
 
 <input type="hidden" name="idno" value="5911111">
 <h2>Antibiotic Resistance Lab</h2>
@@ -21,7 +22,8 @@
 </table>
 <!-- <button type="button" onclick="alert('Hello World!')">Submit</button> -->
 <input type="submit" value="Submit">
-</form>
+{!! Form::close() !!}
+<!-- </form> -->
 </body>
 </html>
 
