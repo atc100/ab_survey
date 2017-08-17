@@ -5,11 +5,12 @@
 <title>Antibiotic Resistance Lab</title>
 </head>
 <body>
-{!! Form::open(['url' => 'alex']) !!}
+{!! Form::open(['url' => 'checklogin']) !!}
 <!-- <form action="alex" method="post"> -->
 
 <input type="hidden" name="idno" value="5911111">
 <h2>Antibiotic Resistance Lab</h2>
+
 <table border="0" width="500" cellpadding="5">
 <tr>
 	<td colspan="2" bgcolor="#cccccc">

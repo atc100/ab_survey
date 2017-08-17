@@ -22,7 +22,9 @@ Route::get('survey', function () {
 
 // Route::post('alex', 'loginController@index');
 
-Route::post('alex', 'loginController@index');
+Route::post('checklogin', 'loginController@index');
+
+Route::post('update_db', 'surveyController@updateDB');
 
 
 /*
