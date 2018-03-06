@@ -19,12 +19,32 @@ Route::get('survey', function () {
     return view('survey');
 });
 
+Route::get('adminlogin', function () {
+    return view('adminlogin');
+});
 
-// Route::post('alex', 'loginController@index');
+/*Route::get('upload', 'adminController@showForm');*/
+
+Route::get('upload', function () {
+    return view('uploadForm');
+});
+
+
+Route::post('upload_students', 'adminController@getfile');
+
+
+Route::get('addTAs', function() {
+    return view('addTAs');
+});
+
+Route::post('addNumTAs', 'adminController@addNumTAs');
+
 
 Route::post('checklogin', 'loginController@index');
 
 Route::post('update_db', 'surveyController@updateDB');
+
+Route::post('checkAdminLogin', 'loginController@admin');
 
 
 /*

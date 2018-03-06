@@ -10,8 +10,10 @@ class loginController extends Controller
 {
     public function index()
     {
-        $lname = Input::get('loginname');
+        $s_no = Input::get('loginname');
 
+
+        /*
         $students = DB::table('students')->get();
 
         $found = 0;
@@ -24,16 +26,50 @@ class loginController extends Controller
                 break;
             }
         }
+        */
 
-        echo "found = $found<br>";
-        echo "You entered $lname<br><br>";
+        $student = DB::table('students')->where('student_no', $s_no)->first();
 
-        if ($found) {
-            return view('survey', ['lname' => $lname]);
+        if (empty($student)) {
+            return(view('badlogin'));
         }
-        else {
-            return view('badlogin');
+
+        if ($student->survey_taken == 1) {
+            return(view('alreadyTaken'));
         }
+
+        echo "Found $s_no<br><br>";
+
+        return view('survey', ['s_no' => $s_no]);
+
+    }
+
+    public function admin()
+    {
+        $loginname = Input::get('loginname');
+
+
+        /*
+        $students = DB::table('students')->get();
+
+        $found = 0;
+
+        echo $students, "<br>";
+
+        foreach ($students as $student) {
+            if ($lname == $student->student_no) {
+                $found = 1;
+                break;
+            }
+        }
+        */
+
+        if ($loginname == 'Yis9Lgch') {
+            return(view('admin', ['tag' => 'random393']));
+        } else {
+            return(view('badadminlogin'));
+        }
+
     }
 }
 ?>

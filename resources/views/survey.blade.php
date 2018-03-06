@@ -8,8 +8,8 @@
 {!! Form::open(['url' => 'update_db']) !!}
 <!-- <form action="update_db" method="post"> -->
 In survey.blade.php!<br>
-lname = {{ $lname }}<br>
-<input type="hidden" name="idno" value={{ $lname }}>
+s_no = {{ $s_no }}<br>
+<input type="hidden" name="idno" value={{ $s_no }}>
 <h2>Antibiotic Resistance Lab</h2>
 <table border="0" width="500" cellpadding="5">
 <tr>
@@ -44,6 +44,7 @@ Penicillin:</td><td><input type="radio" name="penR" value="1"> Yes <input type="
 	</td>
 	<td>
 		<select name="age">
+			<option hidden disabled selected value=""> Select </option>
 			<option value="1">16-20
 			<option value="2">21-25
 			<option value="3">26-30
@@ -78,19 +79,19 @@ Penicillin:</td><td><input type="radio" name="penR" value="1"> Yes <input type="
 	</td>
 </tr>
 <tr>
-	<td align="right" valign="top"><input type="radio" name="ABuse" value="1"></td><td>Using one now</td>
+	<td align="right" valign="top"><input type="radio" name="abUse" value="1"></td><td>Using one now</td>
 </tr>
 <tr>
-	<td align="right" valign="top"><input type="radio" name="ABuse" value="2"></td><td>Within the last year</td>
+	<td align="right" valign="top"><input type="radio" name="abUse" value="2"></td><td>Within the last year</td>
 </tr>
 <tr>
-	<td align="right" valign="top"><input type="radio" name="ABuse" value="3"></td><td>More than a year but within the last 5 years</td>
+	<td align="right" valign="top"><input type="radio" name="abUse" value="3"></td><td>More than a year but within the last 5 years</td>
 </tr>
 <tr>
-	<td align="right" valign="top"><input type="radio" name="ABuse" value="4"></td><td>More than 5 years ago</td>
+	<td align="right" valign="top"><input type="radio" name="abUse" value="4"></td><td>More than 5 years ago</td>
 </tr>
 <tr>
-	<td align="right" valign="top"><input type="radio" name="ABuse" value="5"></td><td>Have never used an antibiotic</td>
+	<td align="right" valign="top"><input type="radio" name="abUse" value="5"></td><td>Have never used an antibiotic</td>
 </tr>
 
 <tr>
@@ -126,7 +127,7 @@ Penicillin:</td><td><input type="radio" name="penR" value="1"> Yes <input type="
 <tr>
 <td><input type="radio" name="soap" value="1"> Yes <input type="radio" name="soap" value="0"> No</td>
 </tr>
-<tr>
+<!--<tr>
 	<td colspan="2" bgcolor="#cccccc">
 		Describe your handwashing habits (beyond bathing & showering)
 	</td>
@@ -145,7 +146,7 @@ Penicillin:</td><td><input type="radio" name="penR" value="1"> Yes <input type="
 </tr>
 <tr>
 	<td align="right" valign="top"><input type="radio" name="handwash" value="5"></td><td>Only if they get dirty</td>
-</tr>
+</tr>-->
 <tr>
 	<td colspan="2" bgcolor="#cccccc">
 		Describe your diet
@@ -206,14 +207,14 @@ Penicillin:</td><td><input type="radio" name="penR" value="1"> Yes <input type="
 		What country were you born in?</td>
 </tr>
 <tr>
-		<td><input type="text" name="nation" value="United States"></td>
+		<td><input type="text" name="nation" value=""></td>
 </tr>
 <tr>
 	<td colspan="2" bgcolor="#cccccc">
 		What country have you primarily resided in for the last 5 years?</td>
 </tr>
 <tr>
-		<td><input type="text" name="nation5yrs" value="United States"></td>
+		<td><input type="text" name="nation5yrs" value=""></td>
 </tr>
 
 </table>
